@@ -20,7 +20,7 @@ for word in message.split():  # Seperate the non-letters at the start of this wo
         suffix_nonletters += word[-1]
         word = word[:-1]
         # Remember if the word was in uppercase or title case
-        
+
     was_upper = word.isupper()
     was_title = word.istitle()
 
@@ -32,7 +32,8 @@ for word in message.split():  # Seperate the non-letters at the start of this wo
         # isn't contained in VOWELS
         prefix_constants += word[0]  # Add the prefix_constants to word[index position zero]
         word = word[1:]  # Word equals word[index position 1 plus every other index position in word]
-        # Add the Pig Latin ending to the word
+
+    # Add the Pig Latin ending to the word
     if prefix_constants != '':  # If prefix_constants doesn't equal nothing
         word += prefix_constants + 'ay'  # Take word + 'ay'
     else:
